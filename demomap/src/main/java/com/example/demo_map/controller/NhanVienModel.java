@@ -1,53 +1,27 @@
 package com.example.demo_map.controller;
 
+import lombok.Data;
+
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.List;
 
+@Data
 public class NhanVienModel {
-    private BigInteger id;
-
+    private BigInteger nhanvienId;
     private String name;
     private String sex;
-
     private String address;
-    private List<HoaDonModel> hoadon;
-    public BigInteger getId() {
-        return id;
+    private List<HoaDonModel> billModels;
+
+    public NhanVienModel() {
+        billModels = new ArrayList<>();
     }
 
-    public List<HoaDonModel> getHoadon() {
-        return hoadon;
-    }
-
-    public void setHoadon(List<HoaDonModel> hoadon) {
-        this.hoadon = hoadon;
-    }
-
-    public void setId(BigInteger id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public NhanVienModel(BigInteger nhanvienId, String name, String sex, String address) {
+        this.nhanvienId = nhanvienId;
         this.name = name;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
         this.sex = sex;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
         this.address = address;
     }
 }

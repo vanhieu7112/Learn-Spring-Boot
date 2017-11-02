@@ -6,6 +6,7 @@ import com.example.demo_map.service.HoadonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigInteger;
 import java.util.List;
 
 @RestController
@@ -30,5 +31,10 @@ public class Hoadoncontroller {
     @PostMapping
     public HoaDonModel create(@RequestBody HoadonForm form){
         return hoadonService.create(form).toModel();
+    }
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable BigInteger id)
+    {
+         hoadonService.delete(id);
     }
 }
