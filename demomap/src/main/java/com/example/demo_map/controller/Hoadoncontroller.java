@@ -37,4 +37,10 @@ public class Hoadoncontroller {
     {
          hoadonService.delete(id);
     }
+    @DeleteMapping()
+    public void deleteAll()
+    {
+       hoadonService.deleteAll();
+
+    }
 }

@@ -41,5 +41,10 @@ public class HoadonService {
         hoadonRepository.delete(id);
 
     }
+    public void deleteAll()
+    {
+        hoadonRepository.deleteAll();
+
+    }
 
 }
